@@ -1,6 +1,6 @@
 ﻿using MaktabQuiz.Models;
 
-namespace MaktabQuiz.Ripository
+namespace MaktabQuiz.Ripository.Interfaces
 {
     public interface IProductRipository
     {

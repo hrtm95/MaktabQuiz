@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using System.Data;
+
 namespace MaktabQuiz.Models.DataBaseContexts{
     public class DapperContext
     {
