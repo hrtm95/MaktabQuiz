@@ -22,7 +22,8 @@ namespace MaktabQuiz.Ripository.Ripositorys
             throw new NotImplementedException();
         }
 
-        public Task DeleteCategury(Category category)
+
+        public Task DeleteCategury(int id)
         {
             throw new NotImplementedException();
         }
@@ -33,6 +34,11 @@ namespace MaktabQuiz.Ripository.Ripositorys
             using var connection = _dopperContext.CreateConnection();
             var result = await connection.QueryAsync<Category>(query);
             return result.ToList();
+        }
+
+        public async Task<Category> GetCateguryById(int id)
+        {
+            return _applicationDbContext.Categorys.FirstOrDefault(c => c.Id == id); ;
         }
 
         public Task UpdateCategury(Category category)

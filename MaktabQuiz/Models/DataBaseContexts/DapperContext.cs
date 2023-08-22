@@ -1,8 +1,9 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using MaktabQuiz.Ripository.Interfaces;
+using Microsoft.Data.SqlClient;
 using System.Data;
 
 namespace MaktabQuiz.Models.DataBaseContexts{
-    public class DapperContext
+    public class DapperContext : IDapperContext
     {
         private readonly IConfiguration _iConfiguration;
         private readonly string _connString;

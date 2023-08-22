@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MaktabQuiz.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230822151543_init")]
+    [Migration("20230822172600_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -53,7 +53,7 @@ namespace MaktabQuiz.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categorys");
+                    b.ToTable("Categorys", (string)null);
                 });
 
             modelBuilder.Entity("MaktabQuiz.Models.Product", b =>
@@ -70,14 +70,15 @@ namespace MaktabQuiz.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("CategoryProduct", b =>
