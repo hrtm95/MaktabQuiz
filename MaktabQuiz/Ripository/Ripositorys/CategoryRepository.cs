@@ -30,7 +30,7 @@ namespace MaktabQuiz.Ripository.Ripositorys
 
         public async Task<List<Category>> GetAllCategury()
         {
-            var query = "select * from Categories";
+            var query = "select * from Categorys";
             using var connection = _dopperContext.CreateConnection();
             var result = await connection.QueryAsync<Category>(query);
             return result.ToList();
