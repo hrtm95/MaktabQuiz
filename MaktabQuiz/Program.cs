@@ -1,4 +1,4 @@
-using IdentityDemo.Models;
+using MaktabQuiz.Models.Database;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
